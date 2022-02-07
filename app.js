@@ -11,6 +11,14 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/about", (req, res) => {
+  res.render("about");
+});
+
+app.get("/add_post", (req, res) => {
+  res.render("add_post");
+});
+
 // LISTEN PORT
 const PORT = 3000;
 app.listen(PORT, () => {
