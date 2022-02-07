@@ -1,16 +1,13 @@
 const express = require("express"); // imported express
+const ejs = require("ejs");
 const app = express(); // assigned express func to app constant
 
-// created an object
-const blog = {
-  id: 1,
-  title: "Blog title",
-  description: "Blog description",
-};
+app.set("view engine", "ejs"); // set engine as ejs that looks at view folder
+app.use(express.static("public")); // look at public folder for static parts of the webapp
 
 // When root URL is entered, it sends response of blog object
 app.get("/", (req, res) => {
-  res.send(blog);
+  res.render("index");
 });
 
 // Lisntens to the port at 3000
