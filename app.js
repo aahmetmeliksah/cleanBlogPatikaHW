@@ -28,6 +28,12 @@ app.get("/add_post", (req, res) => {
   res.render("add_post");
 });
 
+// get id info
+app.get("/posts/:id", (req, res) => {
+  console.log(req.params.id);
+});
+
+// post blog details via post
 app.post("/", async (req, res) => {
   await Post.create(req.body);
   res.redirect("/");
