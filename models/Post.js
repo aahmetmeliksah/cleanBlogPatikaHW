@@ -5,10 +5,6 @@ const mongoose = require("mongoose");
 
 mongoose.connect("mongodb://localhost/cleanblog-test-db");
 
-// mongoose
-//   .connect("mongodb://localhost:3000/cleanblog-test-db")
-//   .then(() => console.log("CONNECTED").catch((err) => console.log(err)));
-
 // create a new schema
 const CleanBlogSchema = new mongoose.Schema({
   title: String,
@@ -23,10 +19,10 @@ const CleanBlogSchema = new mongoose.Schema({
 const BlogPost = mongoose.model("BlogPost", CleanBlogSchema);
 
 // create a blogpost document
-BlogPost.create({
-  title: "Post 1",
-  summary: "Summary 1",
-  content: "Content 1 ",
-});
+// BlogPost.create({
+//   title: "Post 1",
+//   summary: "Summary 1",
+//   content: "Content 1 ",
+// });
 
 module.exports = BlogPost;
