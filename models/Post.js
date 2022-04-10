@@ -16,7 +16,7 @@ const CleanBlogSchema = new mongoose.Schema({
 });
 
 // compile the schema into a model
-const BlogPost = mongoose.model("BlogPost", CleanBlogSchema);
+const Post = mongoose.model("Post", CleanBlogSchema);
 
 // create a blogpost document
 // BlogPost.create({
@@ -25,4 +25,4 @@ const BlogPost = mongoose.model("BlogPost", CleanBlogSchema);
 //   content: "Content 1 ",
 // });
 
-module.exports = BlogPost;
+module.exports = Post;
